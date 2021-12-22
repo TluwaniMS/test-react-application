@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import Header from "./components/header-component/Header";
 
 function App() {
   return (
     <div className="App">
-      <div className="header">react test</div>
+      <Header />
     </div>
   );
 }
