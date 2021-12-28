@@ -19,7 +19,8 @@ const MainToDosContainer = (props) => {
   };
 
   const deleteTodo = (id) => {
-    console.log(id);
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    modifyToDos(newTodos);
   };
 
   return (
