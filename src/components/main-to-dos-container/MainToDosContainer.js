@@ -25,9 +25,7 @@ const MainToDosContainer = (props) => {
 
   return (
     <div className="">
-      {todos.map((todo) => (
-        <ListOfToDos todo={todo} deleteTodo={deleteTodo} markTodoAsCompleted={markTodoAsCompleted} />
-      ))}
+      <ListOfToDos todos={todos} deleteTodo={deleteTodo} markTodoAsCompleted={markTodoAsCompleted} />
     </div>
   );
 };
