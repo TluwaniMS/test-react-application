@@ -1,7 +1,9 @@
-const ListOfToDos = (props) => {
+const ListOfToDos = ({ todo, deleteTodo, markTodoAsCompleted }) => {
   return (
-    <div className="bg-gray-800 m-auto w-4/12 mt-8 p-8px text-white">
-      <h1>To do: {props.todo.task}</h1>
+    <div className="" key={todo.id}>
+      <h1>To do: {todo.task}</h1>
+      <span onClick={() => deleteTodo(todo.id)}>delete</span>
+      <span onClick={() => markTodoAsCompleted(todo.id)}></span>
     </div>
   );
 };
