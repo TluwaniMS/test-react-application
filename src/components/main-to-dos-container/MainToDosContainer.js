@@ -15,7 +15,7 @@ const MainToDosContainer = (props) => {
   ]);
 
   return (
-    <div>
+    <div className="flex flex-col">
       {todos.map((todo) => (
         <ListOfToDos todo={todo} />
       ))}
