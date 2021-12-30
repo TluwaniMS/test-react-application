@@ -1,5 +1,18 @@
 import { gql } from "@apollo/client";
 
-export const GET_ALL_HOSPITALS = gql``;
+export const GET_ALL_HOSPITALS = gql`
+  query getAllHospitals {
+    hospitalName
+    hospitalKey
+  }
+`;
 
-export const GET_HOSPITAL_BY_KEY = gql``;
+export const GET_HOSPITAL_BY_KEY = gql`
+  query getHospitalByHospitalKey($hospitalKey: String!) {
+    getHospitalByHospitalKey(hospitalKey: $hospitalKey) {
+      hospitalName
+      hospitalKey
+      municipality
+    }
+  }
+`;
