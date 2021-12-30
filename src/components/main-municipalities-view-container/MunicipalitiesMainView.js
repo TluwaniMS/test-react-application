@@ -1,7 +1,11 @@
 import React from "react";
 
 const MunicipalitiesMainView = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h1>Municipalities view works!!</h1>
+    </div>
+  );
 };
 
 export default MunicipalitiesMainView;
