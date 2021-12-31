@@ -1,9 +1,11 @@
 import { gql } from "@apollo/client";
 
 export const GET_ALL_MUNICIPALITIES = gql`
-  query getAllMunicipalities {
-    municipalityName
-    municipalityKey
+  query GetAllMunicipalities {
+    getAllMunicipalities {
+      municipalityName
+      municipalityKey
+    }
   }
 `;
 
