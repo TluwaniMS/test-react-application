@@ -10,7 +10,7 @@ const DoctorsMainView = () => {
   return (
     <div>
       {loading && <Spinner />}
-      {data && <DoctorsView doctors={doctors} />}
+      {data && <DoctorsView doctors={data.getAllDoctors} />}
     </div>
   );
 };

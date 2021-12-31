@@ -10,7 +10,7 @@ const MunicipalitiesMainView = () => {
   return (
     <div>
       {loading && <Spinner />}
-      {data && <MunicipalitiesView municipalities={municipalities} />}
+      {data && <MunicipalitiesView municipalities={data.getAllMunicipalities} />}
     </div>
   );
 };
