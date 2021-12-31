@@ -1,12 +1,15 @@
 import { useQuery } from "@apollo/client";
 import { GET_ALL_MUNICIPALITIES } from "../../queries/municipalities.query";
 
+import Spinner from "../../views/loading-spinner/Spinner";
+
 const MunicipalitiesMainView = () => {
   const { loading, error, data } = useQuery(GET_ALL_MUNICIPALITIES);
 
   return (
     <div>
-      <h1>Municipalities view works!!</h1>
+      {loading && <Spinner />}
+      {data && <h1>Hello World!!</h1>}
     </div>
   );
 };

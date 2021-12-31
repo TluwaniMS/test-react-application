@@ -1,12 +1,15 @@
 import { useQuery } from "@apollo/client";
 import { GET_ALL_DOCTORS } from "../../queries/doctors.query";
 
+import Spinner from "../../views/loading-spinner/Spinner";
+
 const DoctorsMainView = () => {
   const { loading, error, data } = useQuery(GET_ALL_DOCTORS);
 
   return (
     <div>
-      <h1>Doctors view works!!</h1>
+      {loading && <Spinner />}
+      {data && <h1>Hello World!!</h1>}
     </div>
   );
 };
