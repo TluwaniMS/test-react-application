@@ -1,10 +1,12 @@
 import { gql } from "@apollo/client";
 
 export const GET_ALL_DOCTORS = gql`
-  query getAllDoctors {
-    id
-    firstName
-    lastName
+  query GetAllDoctors {
+    getAllDoctors {
+      id
+      firstName
+      lastName
+    }
   }
 `;
 
