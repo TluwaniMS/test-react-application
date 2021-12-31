@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ALL_HOSPITALS } from "../../queries/hospitals.query";
 
 import Spinner from "../../views/loading-spinner/Spinner";
+import HospitalsView from "../../views/hospitals-view/HospitalsView";
 
 const HospitalsMainView = () => {
   const { loading, error, data } = useQuery(GET_ALL_HOSPITALS);
@@ -9,7 +10,7 @@ const HospitalsMainView = () => {
   return (
     <div>
       {loading && <Spinner />}
-      {data && <h1>Hello World!!</h1>}
+      {data && <HospitalsView hospitals={hospitals} />}
     </div>
   );
 };

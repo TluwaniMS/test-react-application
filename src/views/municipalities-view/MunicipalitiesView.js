@@ -1,7 +1,11 @@
-import React from "react";
-
-const MunicipalitiesView = () => {
-  return <div></div>;
+const MunicipalitiesView = ({ municipalities }) => {
+  return (
+    <div>
+      {municipalities.map((municipality) => (
+        <h4></h4>
+      ))}
+    </div>
+  );
 };
 
 export default MunicipalitiesView;
