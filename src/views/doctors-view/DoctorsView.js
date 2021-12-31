@@ -1,3 +1,5 @@
+import "./DoctorsView.css";
+
 const DoctorsView = ({ doctors }) => {
   return (
     <div className="doctors-main-container">

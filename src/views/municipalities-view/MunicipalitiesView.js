@@ -1,6 +1,8 @@
+import "./MunicipalitiesView.css";
+
 const MunicipalitiesView = ({ municipalities }) => {
   return (
-    <div>
+    <div className="municipalities-main-container">
       {municipalities.map((municipality) => (
         <h4></h4>
       ))}

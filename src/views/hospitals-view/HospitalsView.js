@@ -1,6 +1,8 @@
+import "./HospitalsView.css";
+
 const HospitalsView = ({ hospitals }) => {
   return (
-    <div>
+    <div className="hospitals-main-container">
       {hospitals.map((hospital) => (
         <h4></h4>
       ))}
