@@ -1,9 +1,10 @@
 import "./HospitalsView.css";
+import { Link } from "react-router-dom";
 
 const HospitalsView = ({ hospital }) => {
   return (
     <div className="hospitals-main-container">
-      <h4>{hospital.hospitalName}</h4>
+      <Link to={`/detailed-hospital-view/${hospital.hospitalKey}`}>{hospital.hospitalName}</Link>
     </div>
   );
 };
