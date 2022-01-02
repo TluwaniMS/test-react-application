@@ -1,12 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
+import { GET_MUNICIPALITY_BY_KEY } from "../../queries/municipalities.query";
+import Spinner from "../loading-spinner/Spinner";
 
 const DetailedMunicipalitiesView = () => {
   const { municipalityKey } = useParams();
+  const { loading, error, data } = useQuery(GET_MUNICIPALITY_BY_KEY, {
+    variables: { municipalityKey: municipalityKey }
+  });
 
   return (
     <div>
-      <h1>municipality key: {municipalityKey}</h1>
+      {loading && <Spinner />}
+      {data && <h1>municipality data retrieved succesfully</h1>}
     </div>
   );
 };
