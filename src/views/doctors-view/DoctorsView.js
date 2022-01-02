@@ -1,11 +1,12 @@
 import "./DoctorsView.css";
+import { Link } from "react-router-dom";
 
 const DoctorsView = ({ doctor }) => {
   return (
     <div className="doctors-main-container">
-      <h4>
+      <Link to={`/detailed-doctors-view/${doctor.id}`}>
         {doctor.firstName} {doctor.lastName}
-      </h4>
+      </Link>
     </div>
   );
 };
