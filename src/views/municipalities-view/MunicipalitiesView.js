@@ -1,11 +1,9 @@
 import "./MunicipalitiesView.css";
 
-const MunicipalitiesView = ({ municipalities }) => {
+const MunicipalitiesView = ({ municipality }) => {
   return (
-    <div className="municipalities-main-container">
-      {municipalities.map((municipality) => (
-        <h4></h4>
-      ))}
+    <div className="municipalities-content-container">
+      <h1>{municipality.municipalityName}</h1>
     </div>
   );
 };
