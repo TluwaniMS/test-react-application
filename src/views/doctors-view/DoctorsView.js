@@ -1,11 +1,11 @@
 import "./DoctorsView.css";
 
-const DoctorsView = ({ doctors }) => {
+const DoctorsView = ({ doctor }) => {
   return (
     <div className="doctors-main-container">
-      {doctors.map((doctor) => (
-        <h4></h4>
-      ))}
+      <h4>
+        {doctor.firstName} {doctor.lastName}
+      </h4>
     </div>
   );
 };
