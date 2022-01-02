@@ -11,7 +11,7 @@ export const GET_ALL_DOCTORS = gql`
 `;
 
 export const GET_DOCTOR_BY_ID = gql`
-  query getDoctorById($doctorsId: Int!) {
+  query GetDoctorById($doctorsId: Int!) {
     getDoctorById(doctorsId: $doctorsId) {
       id
       firstName
