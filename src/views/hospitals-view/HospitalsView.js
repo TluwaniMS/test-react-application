@@ -1,11 +1,9 @@
 import "./HospitalsView.css";
 
-const HospitalsView = ({ hospitals }) => {
+const HospitalsView = ({ hospital }) => {
   return (
     <div className="hospitals-main-container">
-      {hospitals.map((hospital) => (
-        <h4></h4>
-      ))}
+      <h4>{hospital.hospitalName}</h4>
     </div>
   );
 };

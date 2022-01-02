@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { GET_ALL_HOSPITALS } from "../../queries/hospitals.query";
-
+import "./HospitalsMainView.css";
 import Spinner from "../../views/loading-spinner/Spinner";
 import HospitalsView from "../../views/hospitals-view/HospitalsView";
 
@@ -10,7 +10,12 @@ const HospitalsMainView = () => {
   return (
     <div>
       {loading && <Spinner />}
-      {data && <HospitalsView hospitals={data.getAllHospitals} />}
+      {data &&
+        data.getAllHospitals.map((hospital) => (
+          <div className="main-hospital-container" key={hospital.hospitalKey}>
+            <HospitalsView hospital={hospital} />
+          </div>
+        ))}
     </div>
   );
 };
