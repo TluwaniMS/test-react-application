@@ -4,9 +4,11 @@ import { useMutation } from "@apollo/client";
 import { DELETE_HOSPITAL_BY_ID } from "../../mutations/hospitals.mutation";
 
 const HospitalsView = ({ hospital }) => {
-  const { data, loading, error } = useMutation(DELETE_HOSPITAL_BY_ID, {
-    variables: { hospitalKey: hospital.hospitalKey }
-  });
+  const deleteHospital = (hospitalKey) => {
+    const { data, loading, error } = useMutation(DELETE_HOSPITAL_BY_ID, {
+      variables: { hospitalKey: hospitalKey }
+    });
+  };
 
   return (
     <div className="hospitals-main-container">

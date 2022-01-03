@@ -4,9 +4,11 @@ import { useMutation } from "@apollo/client";
 import { DELETE_MUNICIPALITY_BY_ID } from "../../mutations/municipalities.mutation";
 
 const MunicipalitiesView = ({ municipality }) => {
-  const { data, loading, error } = useMutation(DELETE_MUNICIPALITY_BY_ID, {
-    variables: { municipalityKey: municipality.municipalityKey }
-  });
+  const deleteMunicipality = (municipalKey) => {
+    const { data, loading, error } = useMutation(DELETE_MUNICIPALITY_BY_ID, {
+      variables: { municipalityKey: municipalKey }
+    });
+  };
 
   return (
     <div className="municipalities-content-container">
