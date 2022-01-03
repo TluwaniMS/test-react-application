@@ -14,7 +14,12 @@ const DoctorsView = ({ doctor }) => {
       <Link to={`/detailed-doctors-view/${doctor.id}`}>
         {doctor.firstName} {doctor.lastName}
       </Link>
-      <div onClick={() => deleteDoctorById({ variables: { doctorsId: parseInt(doctor.id) } })}>X</div>
+      <div
+        className="content-deletion"
+        onClick={() => deleteDoctorById({ variables: { doctorsId: parseInt(doctor.id) } })}
+      >
+        X
+      </div>
     </div>
   );
 };

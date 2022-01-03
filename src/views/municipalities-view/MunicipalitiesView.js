@@ -13,6 +13,7 @@ const MunicipalitiesView = ({ municipality }) => {
     <div className="municipalities-content-container">
       <Link to={`/detailed-municipality-view/${municipality.municipalityKey}`}>{municipality.municipalityName}</Link>
       <div
+        className="content-deletion"
         onClick={() =>
           deleteMunicipalityByMunicipalKey({ variables: { municipalityKey: municipality.municipalityKey } })
         }
