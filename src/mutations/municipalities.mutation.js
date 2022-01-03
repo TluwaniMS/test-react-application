@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const DELETE_MUNICIPALITY_BY_ID = gql`
+export const DELETE_MUNICIPALITY_BY_ID = gql`
   mutation DeleteMunicipalityById($municipalityKey: String!) {
     deleteMunicipalityByMunicipalKey(municipalityKey: $municipalityKey)
   }

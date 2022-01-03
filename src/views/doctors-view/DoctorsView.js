@@ -1,6 +1,7 @@
 import "./DoctorsView.css";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
+import { DELETE_DOCTOR_BY_ID } from "../../mutations/doctors.mutation";
 
 const DoctorsView = ({ doctor }) => {
   return (
