@@ -2,9 +2,12 @@ import "./HospitalsView.css";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { DELETE_HOSPITAL_BY_ID } from "../../mutations/hospitals.mutation";
+import { GET_ALL_HOSPITALS } from "../../queries/hospitals.query";
 
 const HospitalsView = ({ hospital }) => {
-  const [deleteHospitalById, { data, loading, error }] = useMutation(DELETE_HOSPITAL_BY_ID);
+  const [deleteHospitalById, { data, loading, error }] = useMutation(DELETE_HOSPITAL_BY_ID, {
+    refetchQueries: [GET_ALL_HOSPITALS]
+  });
 
   return (
     <div className="hospitals-main-container">
