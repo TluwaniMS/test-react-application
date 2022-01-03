@@ -7,6 +7,7 @@ const DoctorsView = ({ doctor }) => {
       <Link to={`/detailed-doctors-view/${doctor.id}`}>
         {doctor.firstName} {doctor.lastName}
       </Link>
+      <div>X</div>
     </div>
   );
 };

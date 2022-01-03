@@ -5,6 +5,7 @@ const MunicipalitiesView = ({ municipality }) => {
   return (
     <div className="municipalities-content-container">
       <Link to={`/detailed-municipality-view/${municipality.municipalityKey}`}>{municipality.municipalityName}</Link>
+      <div>X</div>
     </div>
   );
 };
