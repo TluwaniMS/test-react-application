@@ -4,18 +4,14 @@ import { useMutation } from "@apollo/client";
 import { DELETE_DOCTOR_BY_ID } from "../../mutations/doctors.mutation";
 
 const DoctorsView = ({ doctor }) => {
-  const deleteDoctor = (doctorId) => {
-    const { data, loading, error } = useMutation(DELETE_DOCTOR_BY_ID, {
-      variables: { doctorsId: parseInt(doctorId) }
-    });
-  };
+  const [deleteDoctorById, { data, loading, error }] = useMutation(DELETE_DOCTOR_BY_ID);
 
   return (
     <div className="doctors-main-container">
       <Link to={`/detailed-doctors-view/${doctor.id}`}>
         {doctor.firstName} {doctor.lastName}
       </Link>
-      <div>X</div>
+      <div onClick={() => deleteDoctorById({ variables: { doctorsId: parseInt(doctor.id) } })}>X</div>
     </div>
   );
 };
