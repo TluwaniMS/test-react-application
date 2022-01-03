@@ -8,7 +8,7 @@ const MunicipalitiesMainView = () => {
   const { loading, error, data } = useQuery(GET_ALL_MUNICIPALITIES);
 
   return (
-    <div>
+    <div className="main-municipalities-view-container">
       {loading && <Spinner />}
       {data &&
         data.getAllMunicipalities.map((municipality) => (

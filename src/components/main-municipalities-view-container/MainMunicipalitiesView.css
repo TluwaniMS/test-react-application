@@ -1,4 +1,11 @@
+.main-municipalities-view-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .main-municipality-container {
   border: 1px solid gray;
   padding: 6px;
+  margin: 8px;
+  width: 18%;
 }
