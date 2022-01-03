@@ -10,7 +10,7 @@ const DoctorsMainView = () => {
   const { loading, error, data } = useQuery(GET_ALL_DOCTORS);
 
   return (
-    <div>
+    <div className="main-doctors-view-container">
       {loading && <Spinner />}
       {data &&
         data.getAllDoctors.map((doctor) => (
