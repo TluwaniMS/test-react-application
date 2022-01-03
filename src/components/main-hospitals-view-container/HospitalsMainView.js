@@ -8,7 +8,7 @@ const HospitalsMainView = () => {
   const { loading, error, data } = useQuery(GET_ALL_HOSPITALS);
 
   return (
-    <div>
+    <div className="main-hospitals-view-container">
       {loading && <Spinner />}
       {data &&
         data.getAllHospitals.map((hospital) => (
