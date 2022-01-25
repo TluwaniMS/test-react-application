@@ -11,7 +11,9 @@ const HospitalsView = ({ hospital }) => {
 
   return (
     <div className="hospitals-main-container">
-      <Link to={`/detailed-hospital-view/${hospital.hospitalKey}`}>{hospital.hospitalName}</Link>
+      <Link to={`/detailed-hospital-view/${hospital.hospitalKey}`} className="content-title">
+        {hospital.hospitalName}
+      </Link>
       <div
         className="content-deletion"
         onClick={() => deleteHospitalById({ variables: { hospitalKey: hospital.hospitalKey } })}

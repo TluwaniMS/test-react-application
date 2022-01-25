@@ -11,7 +11,9 @@ const MunicipalitiesView = ({ municipality }) => {
 
   return (
     <div className="municipalities-content-container">
-      <Link to={`/detailed-municipality-view/${municipality.municipalityKey}`}>{municipality.municipalityName}</Link>
+      <Link to={`/detailed-municipality-view/${municipality.municipalityKey}`} className="content-title">
+        {municipality.municipalityName}
+      </Link>
       <div
         className="content-deletion"
         onClick={() =>

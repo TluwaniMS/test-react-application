@@ -11,7 +11,7 @@ const DoctorsView = ({ doctor }) => {
 
   return (
     <div className="doctors-main-container">
-      <Link to={`/detailed-doctors-view/${doctor.id}`}>
+      <Link to={`/detailed-doctors-view/${doctor.id}`} className="content-title">
         {doctor.firstName} {doctor.lastName}
       </Link>
       <div

@@ -1,3 +1,7 @@
 .content-deletion {
   cursor: pointer;
 }
+
+.content-title {
+  color: black;
+}
