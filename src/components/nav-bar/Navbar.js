@@ -4,9 +4,15 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="main-navbar-content-container">
-      <Link to="municipalities">municipalities</Link>
-      <Link to="hospitals">hospitals</Link>
-      <Link to="doctors">doctors</Link>
+      <Link className="navbar-item" to="municipalities">
+        municipalities
+      </Link>
+      <Link className="navbar-item" to="hospitals">
+        hospitals
+      </Link>
+      <Link className="navbar-item" to="doctors">
+        doctors
+      </Link>
     </div>
   );
 };
