@@ -7,7 +7,7 @@ import Spinner from "../../views/loading-spinner/Spinner";
 import DoctorsView from "../../views/doctors-view/DoctorsView";
 
 const DoctorsMainView = () => {
-  const { loading, error, data } = useQuery(GET_ALL_DOCTORS);
+  const { loading, data } = useQuery(GET_ALL_DOCTORS);
 
   return (
     <div className="main-doctors-view-container">

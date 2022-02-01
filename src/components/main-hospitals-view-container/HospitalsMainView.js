@@ -5,7 +5,7 @@ import Spinner from "../../views/loading-spinner/Spinner";
 import HospitalsView from "../../views/hospitals-view/HospitalsView";
 
 const HospitalsMainView = () => {
-  const { loading, error, data } = useQuery(GET_ALL_HOSPITALS);
+  const { loading, data } = useQuery(GET_ALL_HOSPITALS);
 
   return (
     <div className="main-hospitals-view-container">

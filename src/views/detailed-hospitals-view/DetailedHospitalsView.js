@@ -6,7 +6,7 @@ import Spinner from "../loading-spinner/Spinner";
 
 const DetailedHospitalsView = () => {
   const { hospitalKey } = useParams();
-  const { loading, error, data } = useQuery(GET_HOSPITAL_BY_KEY, { variables: { _id: hospitalKey } });
+  const { loading, data } = useQuery(GET_HOSPITAL_BY_KEY, { variables: { _id: hospitalKey } });
 
   return (
     <div>

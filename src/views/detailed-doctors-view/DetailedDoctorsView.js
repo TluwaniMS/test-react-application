@@ -6,7 +6,7 @@ import Spinner from "../loading-spinner/Spinner";
 
 const DetailedDoctorsView = () => {
   const { doctorId } = useParams();
-  const { loading, error, data } = useQuery(GET_DOCTOR_BY_ID, { variables: { _id: doctorId } });
+  const { loading, data } = useQuery(GET_DOCTOR_BY_ID, { variables: { _id: doctorId } });
 
   return (
     <div>
