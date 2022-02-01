@@ -3,17 +3,17 @@ import { gql } from "@apollo/client";
 export const GET_ALL_MUNICIPALITIES = gql`
   query GetAllMunicipalities {
     getAllMunicipalities {
+      _id
       municipalityName
-      municipalityKey
     }
   }
 `;
 
 export const GET_MUNICIPALITY_BY_KEY = gql`
-  query getMunicipalityByKey($municipalityKey: String!) {
-    getMunicipalityByMunicipalityKey(municipalityKey: $municipalityKey) {
+  query getMunicipalityById($_id: String!) {
+    getMunicipalityByMunicipalityId(_id: $_id) {
+      _id
       municipalityName
-      municipalityKey
     }
   }
 `;
