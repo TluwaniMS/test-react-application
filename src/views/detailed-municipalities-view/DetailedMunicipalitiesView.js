@@ -7,7 +7,7 @@ import Spinner from "../loading-spinner/Spinner";
 const DetailedMunicipalitiesView = () => {
   const { municipalityKey } = useParams();
   const { loading, error, data } = useQuery(GET_MUNICIPALITY_BY_KEY, {
-    variables: { municipalityKey: municipalityKey }
+    variables: { _id: municipalityKey }
   });
 
   return (

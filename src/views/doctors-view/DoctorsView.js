@@ -5,19 +5,16 @@ import { DELETE_DOCTOR_BY_ID } from "../../mutations/doctors.mutation";
 import { GET_ALL_DOCTORS } from "../../queries/doctors.query";
 
 const DoctorsView = ({ doctor }) => {
-  const [deleteDoctorById, { data, loading, error }] = useMutation(DELETE_DOCTOR_BY_ID, {
+  const [deleteDoctorById] = useMutation(DELETE_DOCTOR_BY_ID, {
     refetchQueries: [GET_ALL_DOCTORS]
   });
 
   return (
     <div className="doctors-main-container">
-      <Link to={`/detailed-doctors-view/${doctor.id}`} className="content-title">
+      <Link to={`/detailed-doctors-view/${doctor._id}`} className="content-title">
         {doctor.firstName} {doctor.lastName}
       </Link>
-      <div
-        className="content-deletion"
-        onClick={() => deleteDoctorById({ variables: { doctorsId: parseInt(doctor.id) } })}
-      >
+      <div className="content-deletion" onClick={() => deleteDoctorById({ variables: { _id: doctor._id } })}>
         X
       </div>
     </div>

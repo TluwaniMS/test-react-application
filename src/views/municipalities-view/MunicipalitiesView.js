@@ -5,20 +5,18 @@ import { DELETE_MUNICIPALITY_BY_ID } from "../../mutations/municipalities.mutati
 import { GET_ALL_MUNICIPALITIES } from "../../queries/municipalities.query";
 
 const MunicipalitiesView = ({ municipality }) => {
-  const [deleteMunicipalityByMunicipalKey, { data, loading, error }] = useMutation(DELETE_MUNICIPALITY_BY_ID, {
+  const [deleteMunicipalityByMunicipalId] = useMutation(DELETE_MUNICIPALITY_BY_ID, {
     refetchQueries: [GET_ALL_MUNICIPALITIES]
   });
 
   return (
     <div className="municipalities-content-container">
-      <Link to={`/detailed-municipality-view/${municipality.municipalityKey}`} className="content-title">
+      <Link to={`/detailed-municipality-view/${municipality._id}`} className="content-title">
         {municipality.municipalityName}
       </Link>
       <div
         className="content-deletion"
-        onClick={() =>
-          deleteMunicipalityByMunicipalKey({ variables: { municipalityKey: municipality.municipalityKey } })
-        }
+        onClick={() => deleteMunicipalityByMunicipalId({ variables: { _id: municipality._id } })}
       >
         X
       </div>

@@ -5,18 +5,18 @@ import { DELETE_HOSPITAL_BY_ID } from "../../mutations/hospitals.mutation";
 import { GET_ALL_HOSPITALS } from "../../queries/hospitals.query";
 
 const HospitalsView = ({ hospital }) => {
-  const [deleteHospitalById, { data, loading, error }] = useMutation(DELETE_HOSPITAL_BY_ID, {
+  const [deleteHospitalById] = useMutation(DELETE_HOSPITAL_BY_ID, {
     refetchQueries: [GET_ALL_HOSPITALS]
   });
 
   return (
     <div className="hospitals-main-container">
-      <Link to={`/detailed-hospital-view/${hospital.hospitalKey}`} className="content-title">
+      <Link to={`/detailed-hospital-view/${hospital._id}`} className="content-title">
         {hospital.hospitalName}
       </Link>
       <div
         className="content-deletion"
-        onClick={() => deleteHospitalById({ variables: { hospitalKey: hospital.hospitalKey } })}
+        onClick={() => deleteHospitalById({ variables: { _id: hospital._id } })}
       >
         X
       </div>
