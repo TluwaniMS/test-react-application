@@ -1,6 +1,9 @@
 # About Repository:
 This is a basic react-js project that I created to learn the basic concepts of react.
 
+# Software(s) required:
+* Latest stable version of Node Package Manager
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
