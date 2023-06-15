@@ -1,14 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { BrowserRouter } from 'react-router-dom';
+
+const host = process.env.REACT_APP_SERVER || `localhost`;
 
 const client = new ApolloClient({
-  uri: "http://localhost:5002/graphql",
-  cache: new InMemoryCache()
+  uri: `http://${host}:5002/graphql`,
+  cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
@@ -19,7 +21,7 @@ ReactDOM.render(
       </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 reportWebVitals();
