@@ -1,5 +1,4 @@
 FROM node:lts
-ENV REACT_APP_SERVER=server
 WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install
